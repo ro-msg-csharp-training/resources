@@ -25,17 +25,6 @@
    * [OPT-4. RabbitMQ](#opt-6-rabbitmq)
    * [OPT-5. WebSocket](#opt-8-websocket)
 
-   C2. Test your app
-
-C3. Exception Handling
-
-C4. Local drive access 
-
-C5. Database access
-
-C6. Create interface for data access
-
-
 ## Fundamentals
 
 C# is a object-oriented and type-safe programming language. C# enables developers to build many types of applications that run in .NET.
@@ -129,19 +118,6 @@ You can work using your local environment:
  - or you can install [Visual Code](https://code.visualstudio.com/) - if you like to work with on .NET core under Linux (but also in Windows) using bash or command line/power shell
  
  
-## Time Bookings
-
-Use the following booking codes to track activities:
-
-| Booking Code                            | Activity                                                                                                          |
-|-----------------------------------------|-------------------------------------------------------------------------------------------------------------------|
-| Schul. & Einarb. C#  - allg. Einarb.    | Going through the learning material; tutorials; doing own theoretical investigations; attending presentations.    |
-|  
-
-In the booking description, please use the following format: `Chapter: Brief activity description`, for the regular calls, simply state the name of the meeting. 
-
-Examples: `1: Reading about dependency injection, spring basics`, `2: Setting up the project.`.
-
 ## Online Shop
 The application will deal with the management and daily functioning of a small online shop. Business processes:
  - **Order creation**: an end customer places an order to buy several products (based on the availability of the products in the stock).
@@ -199,27 +175,6 @@ Further Resources:
 
 ### 3. Security
 
-Goal: Initialize the database schema and map the tables to C# classes using JPA.
-
-Required Reading:
-
- - [Database migrations with Flyway](https://www.baeldung.com/database-migrations-with-flyway)
- - [JPA - Entities](https://docs.oracle.com/C#ee/5/tutorial/doc/bnbqa.html)
- - [JPA - JPQL](https://www.tutorialspoint.com/jpa/jpa_jpql.htm)
- - [Introduction to Spring Data JPA](https://www.baeldung.com/the-persistence-layer-with-spring-data-jpa)
-
-Online Shop:
- 
- > Create a data model for your application in a Flyway SQL migration. You can refine the model by adding unique indexes (e.g. supplier name) and introducing artificial PKs instead of composite ones and also add a unique index.
- >
- > Translate this data model into C# entity classes. Use Lombok to annotate these classes with `@Data` annotations to generate getters, setters, equals and hashCode. Hint: *it might be useful to create a base entity class (containing just the primary key) or an interface (containing the primary key getter and setter) to be able to handle entities generically later on.*
- > 
- > Annotate all the entities with the proper JPA annotations (`@Entity`, `@OneToMany`, etc). Write Spring Data JPA repositories to allow easy access to your entities. 
-
-Further Resources:
- - [Spring Data Reference](https://docs.spring.io/spring-data/jpa/docs/2.1.6.RELEASE/reference/html/)
- - [Spring Database Initialization](https://docs.spring.io/spring-boot/docs/2.1.4.RELEASE/reference/html/howto-database-initialization.html#howto-execute-flyway-database-migrations-on-startup)
- - [Spring in Action](https://1drv.ms/b/s!AiBPL7npTofshY5PJim4M5RiiOyu7w) - Part 1, Chapter 3.2
 
 ### 4. Exercises
 
@@ -228,9 +183,7 @@ Goal: Group business logic into service classes and expose this logic through RE
 Required Reading:
 
  - [What is REST?](https://medium.com/extend/what-is-rest-a-simple-explanation-for-beginners-part-1-introduction-b4a072f8740f) - Parts 1 and 2
- - [Spring REST Tutorial](https://spring.io/guides/tutorials/rest/)
- - [Spring Service Components](https://www.tutorialspoint.com/spring_boot/spring_boot_service_components.htm)
- - [Strategy Design Pattern](https://en.wikipedia.org/wiki/Strategy_pattern)
+ 
 
 Online Shop:
  > Create a simple API for exposing the products and product categories: 
@@ -255,10 +208,7 @@ Online Shop:
 Further Resources:
 
  - [RESTful API Designing Guidelines](https://hackernoon.com/restful-api-designing-guidelines-the-best-practices-60e1d954e7c9)
- - [DDD and Spring](https://www.baeldung.com/hexagonal-architecture-ddd-spring)
- - [Transaction Management](https://docs.spring.io/spring/docs/5.1.6.RELEASE/spring-framework-reference/data-access.html#transaction)
- - [ConditionalOnProperty](https://docs.spring.io/spring-boot/docs/2.1.4.RELEASE/api/org/springframework/boot/autoconfigure/condition/ConditionalOnProperty.html)
- - [Spring in Action](https://1drv.ms/b/s!AiBPL7npTofshY5PJim4M5RiiOyu7w) - Part 2, Chapter 6
+ 
 
 
 ### OPT-1. ODBC
