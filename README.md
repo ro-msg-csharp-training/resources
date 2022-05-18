@@ -10,6 +10,12 @@
  - [Chapters](#chapters)
    * [0. Prerequisites](#0-prerequisites)
    * [1. WEB API](#1-WEB-API)
+		* [C1. Create Web API project](#C1-Create-Web-API-project)
+		* [C2. Test your app](#C2-Test-your-app)
+		* [C3. Exception Handling](#C3-Exception-Handling)
+		* [C4. Local drive access](#C4-Local-drive-access)
+		* [C5. Database access](#C5-Database-access)
+		* [C6. Create interface for data access](#C6-Create-interface-for-data-access)
    * [2. UI](#2-ui)
    * [3. Security](#3-Security)
    * [4. Exercises](#4-Exercises)
@@ -112,19 +118,6 @@ You can work using your local environment:
  - or you can install [Visual Code](https://code.visualstudio.com/) - if you like to work with on .NET core under Linux (but also in Windows) using bash or command line/power shell
  
  
-## Time Bookings
-
-Use the following booking codes to track activities:
-
-| Booking Code                            | Activity                                                                                                          |
-|-----------------------------------------|-------------------------------------------------------------------------------------------------------------------|
-| Schul. & Einarb. C#  - allg. Einarb.    | Going through the learning material; tutorials; doing own theoretical investigations; attending presentations.    |
-|  
-
-In the booking description, please use the following format: `Chapter: Brief activity description`, for the regular calls, simply state the name of the meeting. 
-
-Examples: `1: Reading about dependency injection, spring basics`, `2: Setting up the project.`.
-
 ## Online Shop
 The application will deal with the management and daily functioning of a small online shop. Business processes:
  - **Order creation**: an end customer places an order to buy several products (based on the availability of the products in the stock).
@@ -164,78 +157,24 @@ Further Resources:
  - [Nuget in 5 minutes](https://Nuget.apache.org/guides/getting-started/Nuget-in-five-minutes.html)
  
 ### 1. WEB API
+#### C1. Create Web API project
+			
+#### C2. Test your app
 
-Goal: Understand dependency injection and how it is realized with .NET
+#### C3. Exception Handling
 
-Required Reading:
+#### C4. Local drive access 
 
- - [What is Dependency Injection?](https://stackoverflow.com/a/130862/7612556)
+#### C5. Database access
 
-
-
-
-Online Shop: *nothing to do*.
-
-Further Resources:
-
- - [Spring in Action](https://1drv.ms/b/s!AiBPL7npTofshY5PJim4M5RiiOyu7w) - Part 1, Chapter 1
- - [What is Spring all about?](https://www.youtube.com/watch?v=gq4S-ovWVlM)
- - [Spring Reference - Overview](https://docs.spring.io/spring/docs/5.1.6.RELEASE/spring-framework-reference/overview.html#overview)
- - [Spring Reference - Core](https://docs.spring.io/spring/docs/5.1.6.RELEASE/spring-framework-reference/core.html#spring-core) - Chapters 1 to 4
+#### C6. Create interface for data access
 
 ### 2. UI
 
-Goal: Generate a new project and be able to use the out-of-the-box Spring Boot features.
 
-Required Reading:
-
- - [Building an Application with Spring Boot](https://spring.io/guides/gs/spring-boot/)
- - [Configuration Properties](https://www.baeldung.com/configuration-properties-in-spring-boot)
- - [Introduction to Lombok](https://www.baeldung.com/intro-to-project-lombok)
- - [Introduction to H2 Database](http://www.topC#tutorial.com/misc/introduction-to-h2-database/)
-
-Online Shop:
- 
- > Register an account on GitHub and accept the training [GitHub Classroom Assignment](https://classroom.github.com/a/qiaU7uWM). This will create a new GitHub repository for you. Clone this repository locally and checkout the `develop` branch. During the course of the training, you will commit and push your work on this branch.
- >
- > Go to "Spring Initializr" and generate a new project:
- > - Group: `ro.msg.learning`,
- > - Artifact: `shop`,
- > - Dependencies: `Web`, `Security`, `JPA`, `Flyway`, `H2`, `Lombok`.
- >
- > Extract the generated `zip` file into the previously cloned repository. Import this project into your IDE. You can delete the `mvnw`, `mvnw.cmd` and `.mvn` files / folders as you have Nuget in the IDE anyway.
- >
- > Enable the [H2 console for your application](https://docs.spring.io/spring-boot/docs/2.1.4.RELEASE/reference/html/boot-features-sql.html#boot-features-sql-h2-console) and configure H2 to use a [file-based storage somewhere on your computer](https://stackoverflow.com/questions/37903105/how-to-configure-spring-boot-to-use-file-based-h2-database/37969181#37969181).
-
-Further Resources:
- - [Spring Boot Reference](https://docs.spring.io/spring-boot/docs/2.1.4.RELEASE/reference/html/index.html) - Parts I and II
- - [Spring Boot Tomcat Sample](https://github.com/oktadev/okta-spring-boot-tomcat-example)
- - [Common Application Properties](https://docs.spring.io/spring-boot/docs/2.1.4.RELEASE/reference/html/common-application-properties.html)
- - [Introduction to SLF4J](https://www.baeldung.com/slf4j-with-log4j2-logback)
 
 ### 3. Security
 
-Goal: Initialize the database schema and map the tables to C# classes using JPA.
-
-Required Reading:
-
- - [Database migrations with Flyway](https://www.baeldung.com/database-migrations-with-flyway)
- - [JPA - Entities](https://docs.oracle.com/C#ee/5/tutorial/doc/bnbqa.html)
- - [JPA - JPQL](https://www.tutorialspoint.com/jpa/jpa_jpql.htm)
- - [Introduction to Spring Data JPA](https://www.baeldung.com/the-persistence-layer-with-spring-data-jpa)
-
-Online Shop:
- 
- > Create a data model for your application in a Flyway SQL migration. You can refine the model by adding unique indexes (e.g. supplier name) and introducing artificial PKs instead of composite ones and also add a unique index.
- >
- > Translate this data model into C# entity classes. Use Lombok to annotate these classes with `@Data` annotations to generate getters, setters, equals and hashCode. Hint: *it might be useful to create a base entity class (containing just the primary key) or an interface (containing the primary key getter and setter) to be able to handle entities generically later on.*
- > 
- > Annotate all the entities with the proper JPA annotations (`@Entity`, `@OneToMany`, etc). Write Spring Data JPA repositories to allow easy access to your entities. 
-
-Further Resources:
- - [Spring Data Reference](https://docs.spring.io/spring-data/jpa/docs/2.1.6.RELEASE/reference/html/)
- - [Spring Database Initialization](https://docs.spring.io/spring-boot/docs/2.1.4.RELEASE/reference/html/howto-database-initialization.html#howto-execute-flyway-database-migrations-on-startup)
- - [Spring in Action](https://1drv.ms/b/s!AiBPL7npTofshY5PJim4M5RiiOyu7w) - Part 1, Chapter 3.2
 
 ### 4. Exercises
 
@@ -244,9 +183,7 @@ Goal: Group business logic into service classes and expose this logic through RE
 Required Reading:
 
  - [What is REST?](https://medium.com/extend/what-is-rest-a-simple-explanation-for-beginners-part-1-introduction-b4a072f8740f) - Parts 1 and 2
- - [Spring REST Tutorial](https://spring.io/guides/tutorials/rest/)
- - [Spring Service Components](https://www.tutorialspoint.com/spring_boot/spring_boot_service_components.htm)
- - [Strategy Design Pattern](https://en.wikipedia.org/wiki/Strategy_pattern)
+ 
 
 Online Shop:
  > Create a simple API for exposing the products and product categories: 
@@ -271,10 +208,7 @@ Online Shop:
 Further Resources:
 
  - [RESTful API Designing Guidelines](https://hackernoon.com/restful-api-designing-guidelines-the-best-practices-60e1d954e7c9)
- - [DDD and Spring](https://www.baeldung.com/hexagonal-architecture-ddd-spring)
- - [Transaction Management](https://docs.spring.io/spring/docs/5.1.6.RELEASE/spring-framework-reference/data-access.html#transaction)
- - [ConditionalOnProperty](https://docs.spring.io/spring-boot/docs/2.1.4.RELEASE/api/org/springframework/boot/autoconfigure/condition/ConditionalOnProperty.html)
- - [Spring in Action](https://1drv.ms/b/s!AiBPL7npTofshY5PJim4M5RiiOyu7w) - Part 2, Chapter 6
+ 
 
 
 ### OPT-1. ODBC
