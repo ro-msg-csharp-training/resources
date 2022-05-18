@@ -11,6 +11,11 @@
    * [0. Prerequisites](#0-prerequisites)
    * [1. WEB API](#1-WEB-API)
 		* [C1. Create Web API project](#C1-Create-Web-API-project)
+		* [C2. Test your app](#C2-Test-your-app)
+		* [C3. Exception Handling](#C3-Exception-Handling)
+		* [C4. Local drive access](#C4-Local-drive-access)
+		* [C5. Database access](#C5-Database-access)
+		* [C6. Create interface for data access](#C6-Create-interface-for-data-access)
    * [2. UI](#2-ui)
    * [3. Security](#3-Security)
    * [4. Exercises](#4-Exercises)
@@ -19,6 +24,17 @@
    * [OPT-3. OAuth](#opt-3-oauth)
    * [OPT-4. RabbitMQ](#opt-6-rabbitmq)
    * [OPT-5. WebSocket](#opt-8-websocket)
+
+   C2. Test your app
+
+C3. Exception Handling
+
+C4. Local drive access 
+
+C5. Database access
+
+C6. Create interface for data access
+
 
 ## Fundamentals
 
@@ -166,23 +182,16 @@ Further Resources:
  
 ### 1. WEB API
 #### C1. Create Web API project
-Goal: Understand dependency injection and how it is realized with .NET
+			
+#### C2. Test your app
 
-Required Reading:
+#### C3. Exception Handling
 
- - [What is Dependency Injection?](https://stackoverflow.com/a/130862/7612556)
+#### C4. Local drive access 
 
+#### C5. Database access
 
-
-
-Online Shop: *nothing to do*.
-
-Further Resources:
-
- - [Spring in Action](https://1drv.ms/b/s!AiBPL7npTofshY5PJim4M5RiiOyu7w) - Part 1, Chapter 1
- - [What is Spring all about?](https://www.youtube.com/watch?v=gq4S-ovWVlM)
- - [Spring Reference - Overview](https://docs.spring.io/spring/docs/5.1.6.RELEASE/spring-framework-reference/overview.html#overview)
- - [Spring Reference - Core](https://docs.spring.io/spring/docs/5.1.6.RELEASE/spring-framework-reference/core.html#spring-core) - Chapters 1 to 4
+#### C6. Create interface for data access
 
 ### 2. UI
 
