@@ -10,6 +10,7 @@
  - [Chapters](#chapters)
    * [0. Prerequisites](#0-prerequisites)
    * [1. WEB API](#1-WEB-API)
+		* [C1. Create Web API project](#Create Web API)
    * [2. UI](#2-ui)
    * [3. Security](#3-Security)
    * [4. Exercises](#4-Exercises)
@@ -164,7 +165,7 @@ Further Resources:
  - [Nuget in 5 minutes](https://Nuget.apache.org/guides/getting-started/Nuget-in-five-minutes.html)
  
 ### 1. WEB API
-
+#### C1. Create Web API
 Goal: Understand dependency injection and how it is realized with .NET
 
 Required Reading:
