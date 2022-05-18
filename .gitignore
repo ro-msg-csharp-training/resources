@@ -6,3 +6,5 @@
 .vs
 
 /.vs
+/Sources/Chapter1/Startup_Chapter/OnlineOrder/bin
+/Sources/Chapter1/Startup_Chapter/OnlineOrder/obj
