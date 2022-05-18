@@ -165,7 +165,7 @@ Further Resources:
  - [Nuget in 5 minutes](https://Nuget.apache.org/guides/getting-started/Nuget-in-five-minutes.html)
  
 ### 1. WEB API
-#### C1. Create Web API
+#### C1. Create Web API project
 Goal: Understand dependency injection and how it is realized with .NET
 
 Required Reading:
