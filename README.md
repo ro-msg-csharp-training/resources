@@ -126,7 +126,7 @@ The application will deal with the management and daily functioning of a small o
 
 Throughout the application, we assume that prices are always in EUR and weights are always in KG. 
 
-![Data Model](./diagrams/data-model.svg "Data Model")
+![Data Model](./diagrams/OrderDiagram.png "Data Model")
 
 ## Chapters
 
@@ -158,9 +158,9 @@ Further Resources:
  
 ### 1. WEB API
 #### C1. Create Web API project
-			
+![Data Model](./diagrams/Chapter1.png "Data Model")
 #### C2. Test your app
-
+![Data Model](./diagrams/Chapter2.png "Data Model")
 #### C3. Exception Handling
 
 #### C4. Local drive access 
