@@ -158,7 +158,7 @@ Further Resources:
  
 ### 1. WEB API
 #### C1. Create Web API project
-![Data Model](./Readme/Chapter1.md "Data Model")
+![Data Model](./Readme/CreateApp/Chapter1.md "Data Model")
 #### C2. Test your app
 ![Data Model](./diagrams/Chapter2.png "Data Model")
 #### C3. Exception Handling
