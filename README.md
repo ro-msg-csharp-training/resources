@@ -156,25 +156,24 @@ Further Resources:
  - [Git - CLI Fundamentals](https://www.youtube.com/watch?v=HVsySz-h9r4)
  - [Nuget in 5 minutes](https://Nuget.apache.org/guides/getting-started/Nuget-in-five-minutes.html)
 ## The APP
-During the cource we will create an application for online shopping. Each chapter will cover diffrent aspects of the C# language. The finnal application will be client-server aplication. 
+During the course, we will create an application for online shopping. Each chapter will cover different aspects of the C# language. The final application will be a client-server application.
 
 ### 1. WEB API
-   For the fist chapter please create a a simple Web API  using .Net Core. 
-   To create the application open Visual Studio, choose a Create a New Project, Select ASP.NET Core Web API project and follow the steps. 
-   Please check the following the images to select the right options: 
+   For the first chapter please create a simple Web API using .Net Core.
+   To create the application open Visual Studio, choose a Create a New Project, Select ASP.NET Core Web API project and follow the steps. Please check the following the images to select the right options: 
    ![Data Model](./Sources/Chapter1/Startup_Chapter/ScreenShots/1.jpg)
    and 
    ![Data Model](./Sources/Chapter1/Startup_Chapter/ScreenShots/2.jpg)
 
-   After you create the project please inspect all the classes that was created. 
+   After you create the project please inspect all the classes that were made. 
    In the project create the Folder Model where you will put your data Model. 
-   As a start up sample you have in ![Data Model](./Sources/Chapter1/Startup_Chapter/) the project created with one class implemented. 
+   As a start-up sample, you have in![Data Model](./Sources/Chapter1/Startup_Chapter/) the project created with one class implemented.
    
 
-   You should create the rest of data models and controlles. The classes are shown in below diagram: 
+   You should create the rest of the data models and controlles. The classes are shown below diagram: 
   ![Data Model](./diagrams/Chapter1.png "Data Model")
    Location, ProductCategory collection should be implemented as a generic "HashTable". 
-   Location, ProductCategory will have controller. 
+   Location, ProductCategory will have a controller. 
    Stock will not have a controller. 
 #### C2. Test your app
 ![Data Model](./diagrams/Chapter2.png "Data Model")
