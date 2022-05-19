@@ -1,1 +1,1 @@
-![Data Model](./diagrams/Chapter1.png "Data Model")
+![Data Model](../diagrams/Chapter1.png "Data Model")
