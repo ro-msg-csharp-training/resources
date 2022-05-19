@@ -146,7 +146,7 @@ Required Reading:
  - [Intro to Visual Studio in 5 minutes](https://www.youtube.com/watch?v=5AOp8zFu4Vg&ab_channel=dotNET)
  - [Visual Studio 2022 Tips & Tricks](https://www.youtube.com/watch?v=etHfCFwH6MY&ab_channel=ClaudioBernasconi)
  - [Build .NET applications with C#](https://docs.microsoft.com/en-us/learn/paths/build-dotnet-applications-csharp/?WT.mc_id=dotnet-35129-website)
-
+ - [SOLID Principles in C#](https://www.c-sharpcorner.com/UploadFile/damubetha/solid-principles-in-C-Sharp/)
 
 Online Shop: *nothing to do*.
 
@@ -155,10 +155,27 @@ Further Resources:
  - [GitHub - Hello World](https://guides.github.com/activities/hello-world/)
  - [Git - CLI Fundamentals](https://www.youtube.com/watch?v=HVsySz-h9r4)
  - [Nuget in 5 minutes](https://Nuget.apache.org/guides/getting-started/Nuget-in-five-minutes.html)
- 
+## The APP
+During the cource we will create an application for online shopping. Each chapter will cover diffrent aspects of the C# language. The finnal application will be client-server aplication. 
+
 ### 1. WEB API
-#### C1. Create Web API project
-![Data Model](./diagrams/Chapter1.png "Data Model")
+   For the fist chapter please create a a simple Web API  using .Net Core. 
+   To create the application open Visual Studio, choose a Create a New Project, Select ASP.NET Core Web API project and follow the steps. 
+   Please check the following the images to select the right options: 
+   ![Data Model](./Sources/Chapter1/Startup_Chapter/ScreenShots/1.jpg)
+   and 
+   ![Data Model](./Sources/Chapter1/Startup_Chapter/ScreenShots/2.jpg)
+
+   After you create the project please inspect all the classes that was created. 
+   In the project create the Folder Model where you will put your data Model. 
+   As a start up sample you have in ![Data Model](./Sources/Chapter1/Startup_Chapter/) the project created with one class implemented. 
+   
+
+   You should create the rest of data models and controlles. The classes are shown in below diagram: 
+  ![Data Model](./diagrams/Chapter1.png "Data Model")
+   Location, ProductCategory collection should be implemented as a generic "HashTable". 
+   Location, ProductCategory will have controller. 
+   Stock will not have a controller. 
 #### C2. Test your app
 ![Data Model](./diagrams/Chapter2.png "Data Model")
 #### C3. Exception Handling

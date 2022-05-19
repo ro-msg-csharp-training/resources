@@ -4,6 +4,22 @@
     {
         public ProductCollection()
         {
+            this.Add(new Product()
+            {
+                Name = "p1",
+                Description = "big",
+                Id = 1,
+                UnitPrice = 1,
+                Weight = 1
+            });
+            this.Add(new Product()
+            {
+                Name = "apple",
+                Description = "big",
+                Id = 2,
+                UnitPrice = 4,
+                Weight = 2
+            });
         }
 
         public new bool Add(Product product)
