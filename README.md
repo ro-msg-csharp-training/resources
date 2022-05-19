@@ -158,7 +158,7 @@ Further Resources:
  
 ### 1. WEB API
 #### C1. Create Web API project
-![Data Model](./diagrams/Chapter1.png "Data Model")
+![Data Model](./Readme/Chapter1.md "Data Model")
 #### C2. Test your app
 ![Data Model](./diagrams/Chapter2.png "Data Model")
 #### C3. Exception Handling
@@ -221,14 +221,12 @@ Required Reading:
 
  - [NoSQL Databases](https://searchdatamanagement.techtarget.com/definition/NoSQL-Not-Only-SQL)
  - [What is MongoDB?](https://www.mongodb.com/what-is-mongodb)
- - [Accessing Data with MongoDB](https://spring.io/guides/gs/accessing-data-mongodb/)
-
-Online Shop:
+ - [Query MongoDB with .Net SDK](https://www.mongodb.com/docs/realm/sdk/dotnet/examples/mongodb-remote-access/)
 
 
 Further Resources:
 
- - [Spring MongoDB Reference](https://docs.spring.io/spring-data/mongodb/docs/2.1.6.RELEASE/reference/html/)
+ - [Net SDK MongoDB Reference](https://www.mongodb.com/docs/realm/sdk/dotnet/)
 
 ### OPT-3. OAuth
 
@@ -259,12 +257,10 @@ Required Reading:
 
  - [Understanding Message Brokers](https://medium.com/@ekanshbansal/understanding-message-brokers-using-rabbitmq-5c8b41ecf0f2)
 
-Online Shop:
-
 
 Further Resources:
 
- - [Spring AMQP Reference](https://docs.spring.io/spring-amqp/docs/2.1.5.RELEASE/reference/)
+ - [.Net Client API Guide](https://www.rabbitmq.com/dotnet-api-guide.html)
  - [An Introduction to Message Brokers](https://medium.com/@xaviergeerinck/an-introduction-to-message-brokers-9bd203b4ebbd)
 
 ### OPT-5. WebSocket
