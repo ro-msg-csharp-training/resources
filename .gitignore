@@ -368,5 +368,9 @@ MigrationBackup/
 # Fody - auto-generated XML schema
 FodyWeavers.xsd
 /.vs
-/Sources/Chapter1/Startup_Chapter/OnlineOrder/bin
-/Sources/Chapter1/Startup_Chapter/OnlineOrder/obj
+*.suo
+*.user
+_ReSharper.*
+bin
+obj
+packages
