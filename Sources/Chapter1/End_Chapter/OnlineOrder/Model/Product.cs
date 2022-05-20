@@ -14,6 +14,7 @@ namespace OnlineOrder.Model
 
         public decimal Weight { get; set; }
 
+
         public override string ToString()
         {
             return  JsonSerializer.Serialize(this);
