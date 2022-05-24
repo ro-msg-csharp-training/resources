@@ -16,9 +16,8 @@
 		* [C4. Local drive access](#C4-Local-drive-access)
 		* [C5. Database access](#C5-Database-access)
 		* [C6. Create interface for data access](#C6-Create-interface-for-data-access)
-   * [2. UI](#2-ui)
-   * [3. Security](#3-Security)
-   * [4. Exercises](#4-Exercises)
+   * [2. Security](#3-Security)
+   * [3. Exercises](#4-Exercises)
    * [OPT-1. ODBC](#opt-1-odbc)
    * [OPT-2. MongoDB](#opt-2-mongodb)
    * [OPT-3. OAuth](#opt-3-oauth)
@@ -105,7 +104,7 @@ The road-map consists of several steps. In each step, a set of theoretical conce
 
 After the learning material for a given step was sufficiently explored, either some new functionality will be added to this application or old functionality will be refactored.
 
-The application will have little-to-no user interface. Developers are expected to perform developer tests with Postman once the REST APIs are implemented.
+The application will have little-to-no user interface. Developers are expected to perform developer tests with Postman once the REST APIs are implemented OR Swagger
 
 All the code written must be published on GitHub. Commits must be pushed when each individual chapter is finished. In order to request a code review from the trainers, you must [open a pull request](https://help.github.com/en/articles/creating-a-pull-request) from the `develop` to the `master` branch.
 
@@ -122,9 +121,6 @@ You can work using your local environment:
 The application will deal with the management and daily functioning of a small online shop. Business processes:
  - **Order creation**: an end customer places an order to buy several products (based on the availability of the products in the stock).
  - **Stock management**: the existing product stocks are updated automatically based on the orders placed by customers.
- - **Shop analytics**: the management must be able to view the evolution of the daily revenue for each individual location of the shop.
-
-Throughout the application, we assume that prices are always in EUR and weights are always in KG. 
 
 ![Data Model](./diagrams/OrderDiagram.png "Data Model")
 
@@ -185,14 +181,11 @@ During the course, we will create an application for online shopping. Each chapt
 
 #### C6. Create interface for data access
 
-### 2. UI
+
+### 2. Security
 
 
-
-### 3. Security
-
-
-### 4. Exercises
+### 3. Exercises
 
 Goal: Group business logic into service classes and expose this logic through REST interfaces.
 
@@ -237,35 +230,13 @@ Required Reading:
 
  - [NoSQL Databases](https://searchdatamanagement.techtarget.com/definition/NoSQL-Not-Only-SQL)
  - [What is MongoDB?](https://www.mongodb.com/what-is-mongodb)
- - [Accessing Data with MongoDB](https://spring.io/guides/gs/accessing-data-mongodb/)
-
-Online Shop:
+ - [Query MongoDB with .Net SDK](https://www.mongodb.com/docs/realm/sdk/dotnet/examples/mongodb-remote-access/)
 
 
 Further Resources:
 
- - [Spring MongoDB Reference](https://docs.spring.io/spring-data/mongodb/docs/2.1.6.RELEASE/reference/html/)
+ - [Net SDK MongoDB Reference](https://www.mongodb.com/docs/realm/sdk/dotnet/)
 
-### OPT-3. OAuth
-
-Goal: Secure the online shop with OAuth 2.0.
-
-Required Reading:
-
- - [The Simplest Guide to OAuth 2.0](https://medium.com/@darutk/the-simplest-guide-to-oauth-2-0-8c71bd9a15bb)
-
-Online Shop:
-
- > Configure your application as an *Authorization Server* with an in-memory store of clients. Use Postman to test that you are able to issue a token using the `password` grant.
- >
- > Now also configure your application as a *Resource Server* and secure your REST APIs using OAuth.
- >
- > Lastly, enable your application to additionally use the GitHub Authorization Server. To do this, you will first need to [register a new OAuth app on GitHub](https://developer.github.com/apps/building-oauth-apps/creating-an-oauth-app/) or contact the trainers for obtaining the credentials of an existing client.
-
-Further Resources:
-
- - [Spring OAuth 2 Developers Guide](https://projects.spring.io/spring-security-oauth/docs/oauth2.html)
- - [Spring SSO vs Resource Server](https://www.baeldung.com/spring-security-oauth2-enable-resource-server-vs-enable-oauth2-sso)
 
 ### OPT-4. RabbitMQ
 
@@ -275,12 +246,10 @@ Required Reading:
 
  - [Understanding Message Brokers](https://medium.com/@ekanshbansal/understanding-message-brokers-using-rabbitmq-5c8b41ecf0f2)
 
-Online Shop:
-
 
 Further Resources:
 
- - [Spring AMQP Reference](https://docs.spring.io/spring-amqp/docs/2.1.5.RELEASE/reference/)
+ - [.Net Client API Guide](https://www.rabbitmq.com/dotnet-api-guide.html)
  - [An Introduction to Message Brokers](https://medium.com/@xaviergeerinck/an-introduction-to-message-brokers-9bd203b4ebbd)
 
 ### OPT-5. WebSocket
