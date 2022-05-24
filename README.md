@@ -158,9 +158,9 @@ During the course, we will create an application for online shopping. Each chapt
 #### C1. Create Web API project
    For the first chapter please create a simple Web API using .Net Core.
    To create the application open Visual Studio, choose a Create a New Project, Select ASP.NET Core Web API project and follow the steps. Please check the following the images to select the right options: 
-   ![Data Model](./Sources/Chapter1/Startup_Chapter/ScreenShots/1.jpg)
+   ![Data Model](./Sources/Chapter1/Startup_Chapter/OnlineOrder/Startup_Chapter/ScreenShots/1.jpg)
    and 
-   ![Data Model](./Sources/Chapter1/Startup_Chapter/ScreenShots/2.jpg)
+   ![Data Model](./Sources/Chapter1/Startup_Chapter/OnlineOrder/Startup_Chapter/ScreenShots/2.jpg)
 
    After you create the project please inspect all the classes that were made. 
    In the project create the Folder Model where you will put your data Model. 
