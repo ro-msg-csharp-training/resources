@@ -159,6 +159,7 @@ Further Resources:
 During the course, we will create an application for online shopping. Each chapter will cover different aspects of the C# language. The final application will be a client-server application.
 
 ### 1. WEB API
+#### C1. Create Web API project
    For the first chapter please create a simple Web API using .Net Core.
    To create the application open Visual Studio, choose a Create a New Project, Select ASP.NET Core Web API project and follow the steps. Please check the following the images to select the right options: 
    ![Data Model](./Sources/Chapter1/Startup_Chapter/ScreenShots/1.jpg)
@@ -170,7 +171,7 @@ During the course, we will create an application for online shopping. Each chapt
    As a start-up sample, you have in![Data Model](./Sources/Chapter1/Startup_Chapter/) the project created with one class implemented.
    
 
-   You should create the rest of the data models and controlles. The classes are shown below diagram: 
+   You should create the rest of the data models and controls. The classes are shown below diagram: 
   ![Data Model](./diagrams/Chapter1.png "Data Model")
    Location, ProductCategory collection should be implemented as a generic "HashTable". 
    Location, ProductCategory will have a controller. 
@@ -178,7 +179,7 @@ During the course, we will create an application for online shopping. Each chapt
 #### C2. Test your app
 ![Data Model](./diagrams/Chapter2.png "Data Model")
 #### C3. Exception Handling
-
+test
 #### C4. Local drive access 
 
 #### C5. Database access
@@ -237,35 +238,13 @@ Required Reading:
 
  - [NoSQL Databases](https://searchdatamanagement.techtarget.com/definition/NoSQL-Not-Only-SQL)
  - [What is MongoDB?](https://www.mongodb.com/what-is-mongodb)
- - [Accessing Data with MongoDB](https://spring.io/guides/gs/accessing-data-mongodb/)
-
-Online Shop:
+ - [Query MongoDB with .Net SDK](https://www.mongodb.com/docs/realm/sdk/dotnet/examples/mongodb-remote-access/)
 
 
 Further Resources:
 
- - [Spring MongoDB Reference](https://docs.spring.io/spring-data/mongodb/docs/2.1.6.RELEASE/reference/html/)
+ - [Net SDK MongoDB Reference](https://www.mongodb.com/docs/realm/sdk/dotnet/)
 
-### OPT-3. OAuth
-
-Goal: Secure the online shop with OAuth 2.0.
-
-Required Reading:
-
- - [The Simplest Guide to OAuth 2.0](https://medium.com/@darutk/the-simplest-guide-to-oauth-2-0-8c71bd9a15bb)
-
-Online Shop:
-
- > Configure your application as an *Authorization Server* with an in-memory store of clients. Use Postman to test that you are able to issue a token using the `password` grant.
- >
- > Now also configure your application as a *Resource Server* and secure your REST APIs using OAuth.
- >
- > Lastly, enable your application to additionally use the GitHub Authorization Server. To do this, you will first need to [register a new OAuth app on GitHub](https://developer.github.com/apps/building-oauth-apps/creating-an-oauth-app/) or contact the trainers for obtaining the credentials of an existing client.
-
-Further Resources:
-
- - [Spring OAuth 2 Developers Guide](https://projects.spring.io/spring-security-oauth/docs/oauth2.html)
- - [Spring SSO vs Resource Server](https://www.baeldung.com/spring-security-oauth2-enable-resource-server-vs-enable-oauth2-sso)
 
 ### OPT-4. RabbitMQ
 
@@ -275,12 +254,10 @@ Required Reading:
 
  - [Understanding Message Brokers](https://medium.com/@ekanshbansal/understanding-message-brokers-using-rabbitmq-5c8b41ecf0f2)
 
-Online Shop:
-
 
 Further Resources:
 
- - [Spring AMQP Reference](https://docs.spring.io/spring-amqp/docs/2.1.5.RELEASE/reference/)
+ - [.Net Client API Guide](https://www.rabbitmq.com/dotnet-api-guide.html)
  - [An Introduction to Message Brokers](https://medium.com/@xaviergeerinck/an-introduction-to-message-brokers-9bd203b4ebbd)
 
 ### OPT-5. WebSocket
