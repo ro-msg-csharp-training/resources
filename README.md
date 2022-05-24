@@ -136,17 +136,17 @@ Goal: Getting familiar with the ecosystem around c#. You can skip this chapter i
 
 Required Reading:
 
- - [Git Basics](https://git-scm.com/book/en/v1/Getting-Started-Git-Basics)  (skip this if you are already familiar with git commands)
- - [Install .NET 6 SDK](https://dotnet.microsoft.com/en-us/learn/dotnet/hello-world-tutorial/intro)
- - [Install Visual Code](https://code.visualstudio.com/)  - or you can use the [Visual Studio 2022]
+ - [Git basics](https://git-scm.com/book/en/v1/Getting-Started-Git-Basics)  (skip this if you are already familiar with git commands)
+ - [Install .NET 6 SDK ](https://dotnet.microsoft.com/en-us/learn/dotnet/hello-world-tutorial/intro)
+ - [Install Visual Code ](https://code.visualstudio.com/)  - or you can use the [Visual Studio 2022]
  - [Install Visual Studio Community 2022 ](https://visualstudio.microsoft.com/vs/community/)   - recommended
- - [Starting with Visual Studio](https://www.youtube.com/watch?v=iC3CJcYxkl0&t=107s&ab_channel=MicrosoftVisualStudio)
- - [Intro To The .NET CLI - How To Use It, Why We Need It, And More](https://www.youtube.com/watch?v=RQLzp2Z8-BE&ab_channel=IAmTimCorey)
- - [C# (c sharp)](https://www.tutorialspoint.com/csharp/index.htm)
- - [Intro to Visual Studio in 5 minutes](https://www.youtube.com/watch?v=5AOp8zFu4Vg&ab_channel=dotNET)
- - [Visual Studio 2022 Tips & Tricks](https://www.youtube.com/watch?v=etHfCFwH6MY&ab_channel=ClaudioBernasconi)
- - [Build .NET applications with C#](https://docs.microsoft.com/en-us/learn/paths/build-dotnet-applications-csharp/?WT.mc_id=dotnet-35129-website)
- - [SOLID Principles in C#](https://www.c-sharpcorner.com/UploadFile/damubetha/solid-principles-in-C-Sharp/)
+ - [Starting with Visual Studio ](https://www.youtube.com/watch?v=iC3CJcYxkl0&t=107s&ab_channel=MicrosoftVisualStudio)
+ - [Intro To The .NET CLI - How To Use It, Why We Need It, And More ](https://www.youtube.com/watch?v=RQLzp2Z8-BE&ab_channel=IAmTimCorey)
+ - [C# (c sharp) ](https://www.tutorialspoint.com/csharp/index.htm)
+ - [Intro to Visual Studio in 5 minutes ](https://www.youtube.com/watch?v=5AOp8zFu4Vg&ab_channel=dotNET)
+ - [Visual Studio 2022 Tips & Tricks ](https://www.youtube.com/watch?v=etHfCFwH6MY&ab_channel=ClaudioBernasconi)
+ - [Build .NET applications with C# ](https://docs.microsoft.com/en-us/learn/paths/build-dotnet-applications-csharp/?WT.mc_id=dotnet-35129-website)
+ - [SOLID Principles in C# ](https://www.c-sharpcorner.com/UploadFile/damubetha/solid-principles-in-C-Sharp/)
 
 Online Shop: *nothing to do*.
 
@@ -178,10 +178,21 @@ During the course, we will create an application for online shopping. Each chapt
 #### C2. Test your app
 ![Data Model](./diagrams/Chapter2.png "Data Model")
 #### C3. Exception Handling
+[C# - Exception Handling](https://www.tutorialspoint.com/csharp/csharp_exception_handling.htm)
+
+
+
+
 
 #### C4. Local drive access 
 
+
+
+
 #### C5. Database access
+
+
+
 
 #### C6. Create interface for data access
 
