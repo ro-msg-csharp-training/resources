@@ -4,7 +4,7 @@ using OnlineOrder.Model;
 namespace OnlineOrder.Controllers
 {
     [ApiController]
-    [Route("[controller]")]
+    [Route("api/[controller]")]
     public class ProductController : ControllerBase
     {
         private IProductCollection _products;

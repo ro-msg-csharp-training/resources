@@ -1,6 +1,12 @@
-using OnlineOrder.Model;
+﻿using OnlineOrder.Model;
+using Microsoft.EntityFrameworkCore;
+using Microsoft.Extensions.DependencyInjection;
+using OnlineOrder.Data;
+using OnlineOrder.Controllers;
 
 var builder = WebApplication.CreateBuilder(args);
+builder.Services.AddDbContext<OnlineOrderContext>(options =>
+    options.UseSqlServer(builder.Configuration.GetConnectionString("OnlineOrderContext") ?? throw new InvalidOperationException("Connection string 'OnlineOrderContext' not found.")));
 
 // Add services to the container.
 
@@ -22,5 +28,7 @@ if (app.Environment.IsDevelopment())
 app.UseAuthorization();
 
 app.MapControllers();
+
+app.MapProductEndpoints();
 
 app.Run();
