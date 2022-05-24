@@ -16,9 +16,8 @@
 		* [C4. Local drive access](#C4-Local-drive-access)
 		* [C5. Database access](#C5-Database-access)
 		* [C6. Create interface for data access](#C6-Create-interface-for-data-access)
-   * [2. UI](#2-ui)
-   * [3. Security](#3-Security)
-   * [4. Exercises](#4-Exercises)
+   * [2. Security](#3-Security)
+   * [3. Exercises](#4-Exercises)
    * [OPT-1. ODBC](#opt-1-odbc)
    * [OPT-2. MongoDB](#opt-2-mongodb)
    * [OPT-3. OAuth](#opt-3-oauth)
@@ -105,7 +104,7 @@ The road-map consists of several steps. In each step, a set of theoretical conce
 
 After the learning material for a given step was sufficiently explored, either some new functionality will be added to this application or old functionality will be refactored.
 
-The application will have little-to-no user interface. Developers are expected to perform developer tests with Postman once the REST APIs are implemented.
+The application will have little-to-no user interface. Developers are expected to perform developer tests with Postman once the REST APIs are implemented OR Swagger
 
 All the code written must be published on GitHub. Commits must be pushed when each individual chapter is finished. In order to request a code review from the trainers, you must [open a pull request](https://help.github.com/en/articles/creating-a-pull-request) from the `develop` to the `master` branch.
 
@@ -122,9 +121,6 @@ You can work using your local environment:
 The application will deal with the management and daily functioning of a small online shop. Business processes:
  - **Order creation**: an end customer places an order to buy several products (based on the availability of the products in the stock).
  - **Stock management**: the existing product stocks are updated automatically based on the orders placed by customers.
- - **Shop analytics**: the management must be able to view the evolution of the daily revenue for each individual location of the shop.
-
-Throughout the application, we assume that prices are always in EUR and weights are always in KG. 
 
 ![Data Model](./diagrams/OrderDiagram.png "Data Model")
 
@@ -186,14 +182,11 @@ test
 
 #### C6. Create interface for data access
 
-### 2. UI
+
+### 2. Security
 
 
-
-### 3. Security
-
-
-### 4. Exercises
+### 3. Exercises
 
 Goal: Group business logic into service classes and expose this logic through REST interfaces.
 
