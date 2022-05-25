@@ -13,16 +13,17 @@
 		* [1.1. Create Web API project](#11-create-web-api-project)
 		* [1.2. Test your app](#12-test-your-app)
 		* [1.3. Local drive access](#13-local-drive-access)
-		* [1.4. Exception Handling](#14-exception-handling)
+		* [1.4. Logging](#14-logging)    
+		* [1.5. Exception Handling](#14-exception-handling)
    * [2. Database access](#2-database-access)
 		* [2.1. ADO.NET](#21-adonet)
 		* [2.2. Entity Framework](#22-entity-framework)		
-   * [3. Create interface for data access](#3-create-interface-for-data-access)
+   * [3. Create GUI](#3-create-gui)
 		* [3.1. Using Angluar vs. React vs. Vue](#31-using-angluar-vs-react-vs-vue)
 		* [3.2. Using Windows Forms vs. WPF](#32-using-windows-forms-vs-wpf)		
 		* [3.3. Using Razor vs. Blazor](#33-using-razor-vs-blazor)
    * [4. Security](#4-security)
-   * [5. Exercises](#5-exercises)
+   * [5. Unit tests](#5-unit-tests)
    * [OPT-1. ODBC](#opt-1-odbc)
    * [OPT-2. MongoDB](#opt-2-mongodb)
    * [OPT-3. OAuth](#opt-3-oauth)
@@ -196,7 +197,11 @@ Online Shop:
 
 #### 1.3. Local drive access 
 How to read/write files, how to log 
-#### 1.4. Exception Handling
+
+#### 1.4. Logging
+How to log errors/info 
+
+#### 1.5. Exception Handling
 How to handle the exception and how to log exceptions
 
 ### 2. Database access
