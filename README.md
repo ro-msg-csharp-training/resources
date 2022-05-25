@@ -9,15 +9,21 @@
  - [Online Shop](#online-shop)
  - [Chapters](#chapters)
    * [0. Prerequisites](#0-prerequisites)
-   * [1. WEB API](#1-WEB-API)
-		* [C1. Create Web API project](#C1-Create-Web-API-project)
-		* [C2. Test your app](#C2-Test-your-app)
-		* [C3. Exception Handling](#C3-Exception-Handling)
-		* [C4. Local drive access](#C4-Local-drive-access)
-		* [C5. Database access](#C5-Database-access)
-		* [C6. Create interface for data access](#C6-Create-interface-for-data-access)
-   * [2. Security](#3-Security)
-   * [3. Exercises](#4-Exercises)
+   * [1. WEB API](#1-web-api)
+		* [1.1. Create Web API project](#11-create-web-api-project)
+		* [1.2. Test your app](#12-test-your-app)
+		* [1.3. Local drive access](#13-local-drive-access)
+		* [1.4. Logging](#14-logging)    
+		* [1.5. Exception Handling](#14-exception-handling)
+   * [2. Database access](#2-database-access)
+		* [2.1. ADO.NET](#21-adonet)
+		* [2.2. Entity Framework](#22-entity-framework)		
+   * [3. Create GUI](#3-create-gui)
+		* [3.1. Using Angluar vs. React vs. Vue](#31-using-angluar-vs-react-vs-vue)
+		* [3.2. Using Windows Forms vs. WPF](#32-using-windows-forms-vs-wpf)		
+		* [3.3. Using Razor vs. Blazor](#33-using-razor-vs-blazor)
+   * [4. Security](#4-security)
+   * [5. Unit tests](#5-unit-tests)
    * [OPT-1. ODBC](#opt-1-odbc)
    * [OPT-2. MongoDB](#opt-2-mongodb)
    * [OPT-3. OAuth](#opt-3-oauth)
@@ -155,7 +161,7 @@ Further Resources:
 During the course, we will create an application for online shopping. Each chapter will cover different aspects of the C# language. The final application will be a client-server application.
 
 ### 1. WEB API
-#### C1. Create Web API project
+#### 1.1. Create Web API project
    For the first chapter please create a simple Web API using .Net Core.
    To create the application open Visual Studio, choose a Create a New Project, Select ASP.NET Core Web API project and follow the steps. Please check the following the images to select the right options: 
    ![Data Model](./Sources/Chapter1/Startup_Chapter/OnlineOrder/Startup_Chapter/ScreenShots/1.jpg)
@@ -172,21 +178,53 @@ During the course, we will create an application for online shopping. Each chapt
    Location, ProductCategory collection should be implemented as a generic "HashTable". 
    Location, ProductCategory will have a controller. 
    Stock will not have a controller. 
-#### C2. Test your app
+
+Online Shop:
+ 
+ > Register an account on GitHub and accept the training [GitHub Classroom Assignment](https://classroom.github.com/a/qiaU7uWM). This will create a new GitHub repository for you. Clone this repository locally and checkout the `develop` branch. During the course of the training, you will commit and push your work on this branch.
+ >
+ > Go to "Visual Studio" and generate a new project ASP.NET Core Web API:
+ > - Project name: `shop`,
+ > - Solution: `ro.msg.learning`,
+ > - NuGet Pachages: `Web`, `Security`, `JPA`, `Flyway`, `H2`, `Lombok`.
+ >
+ > Extract the generated `zip` file into the previously cloned repository. Import this project into your IDE. You can delete the `mvnw`, `mvnw.cmd` and `.mvn` files / folders as you have Maven in the IDE anyway.
+ >
+ > Enable the [H2 console for your application](https://docs.spring.io/spring-boot/docs/2.1.4.RELEASE/reference/html/boot-features-sql.html#boot-features-sql-h2-console) and configure H2 to use a [file-based storage somewhere on your computer](https://stackoverflow.com/questions/37903105/how-to-configure-spring-boot-to-use-file-based-h2-database/37969181#37969181).
+
+#### 1.2. Test your app
 ![Data Model](./diagrams/Chapter2.png "Data Model")
-#### C3. Exception Handling
-test
-#### C4. Local drive access 
 
-#### C5. Database access
+#### 1.3. Local drive access 
+How to read/write files, how to log 
 
-#### C6. Create interface for data access
+#### 1.4. Logging
+How to log errors/info 
 
+#### 1.5. Exception Handling
+How to handle the exception and how to log exceptions
 
-### 2. Security
+### 2. Database access
 
+#### 2.1. ADO.NET
+(Describe how to connect to SQL Server database using ADO.NET )
 
-### 3. Exercises
+#### 2.2. Entity Framework
+(Describe how to connect to SQL Server database using Entity Framework )
+
+### 3. Create interface for data access
+Below are described 3 methods on how to access the database using c#
+#### 3.1. Using Angluar vs. React vs. Vue
+(here some links to Angluar vs. React vs. Vue)
+#### 3.2. Using Windows Forms vs. WPF
+(here some examples and links)
+#### 3.3. Using Razor vs. Blazor
+(here some examples and links)
+
+### 4. Security
+(Describe how to secure your c# API )
+
+### 5. Exercises
 
 Goal: Group business logic into service classes and expose this logic through REST interfaces.
 
