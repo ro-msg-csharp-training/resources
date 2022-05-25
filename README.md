@@ -9,20 +9,20 @@
  - [Online Shop](#online-shop)
  - [Chapters](#chapters)
    * [0. Prerequisites](#0-prerequisites)
-   * [1. WEB API](#1-WEB-API)
-		* [C1. Create Web API project](#C1-Create-Web-API-project)
-		* [C2. Test your app](#C2-Test-your-app)
-		* [C3. Local drive access](#C3-Local-drive-access)
-		* [C4. Exception Handling](#C4-Exception-Handling)
-   * [2. Database access](#C5-Database-access)
-		* [C1. ADO.NET](#C1-ADO-NET)
-		* [C2. Entity Framework](#C2-Entity-Framework)		
-   * [3. Create interface for data access](#3-Create-interface-for-data-access)
-		* [C1. Using Angluar vs. React vs. Vue](#C1-Using-Angluar-vs-React-vs-Vue)
-		* [C2. Using Windows Forms vs. WPF](#C2-Using-Windows-Forms-vs-WPF)		
-		* [C3. Using Razor vs. Blazor](#C3-Using-Razor-vs-Blazor)
-   * [4. Security](#3-Security)
-   * [5. Exercises](#4-Exercises)
+   * [1. WEB API](#1-web-api)
+		* [1.1. Create Web API project](#11-create-web-api-project)
+		* [1.2. Test your app](#12-test-your-app)
+		* [1.3. Local drive access](#13-local-drive-access)
+		* [1.4. Exception Handling](#14-exception-handling)
+   * [2. Database access](#2-database-access)
+		* [2.1. ADO.NET](#21-ado-net)
+		* [2.2. Entity Framework](#22-entity-framework)		
+   * [3. Create interface for data access](#3-create-interface-for-data-access)
+		* [3.1. Using Angluar vs. React vs. Vue](#31-using-angluar-vs-react-vs-vue)
+		* [3.2. Using Windows Forms vs. WPF](#32-using-windows-forms-vs-wpf)		
+		* [3.3. Using Razor vs. Blazor](#33-using-razor-vs-blazor)
+   * [4. Security](#3-security)
+   * [5. Exercises](#4-exercises)
    * [OPT-1. ODBC](#opt-1-odbc)
    * [OPT-2. MongoDB](#opt-2-mongodb)
    * [OPT-3. OAuth](#opt-3-oauth)
@@ -160,7 +160,7 @@ Further Resources:
 During the course, we will create an application for online shopping. Each chapter will cover different aspects of the C# language. The final application will be a client-server application.
 
 ### 1. WEB API
-#### C1. Create Web API project
+#### 1.1. Create Web API project
    For the first chapter please create a simple Web API using .Net Core.
    To create the application open Visual Studio, choose a Create a New Project, Select ASP.NET Core Web API project and follow the steps. Please check the following the images to select the right options: 
    ![Data Model](./Sources/Chapter1/Startup_Chapter/OnlineOrder/Startup_Chapter/ScreenShots/1.jpg)
@@ -191,29 +191,29 @@ Online Shop:
  >
  > Enable the [H2 console for your application](https://docs.spring.io/spring-boot/docs/2.1.4.RELEASE/reference/html/boot-features-sql.html#boot-features-sql-h2-console) and configure H2 to use a [file-based storage somewhere on your computer](https://stackoverflow.com/questions/37903105/how-to-configure-spring-boot-to-use-file-based-h2-database/37969181#37969181).
 
-#### C2. Test your app
+#### 1.2. Test your app
 ![Data Model](./diagrams/Chapter2.png "Data Model")
 
-#### C3. Local drive access 
+#### 1.3. Local drive access 
 How to read/write files, how to log 
-#### C4. Exception Handling
+#### 1.4. Exception Handling
 How to handle the exception and how to log exceptions
 
 ### 2. Database access
 
-#### C1. ADO.NET
+#### 2.1. ADO.NET
 (Describe how to connect to SQL Server database using ADO.NET )
 
-#### C2. Entity Framework
+#### 2.2. Entity Framework
 (Describe how to connect to SQL Server database using Entity Framework )
 
 ### 3. Create interface for data access
 Below are described 3 methods on how to access the database using c#
-#### C1. Using Angluar vs. React vs. Vue
+#### 3.1. Using Angluar vs. React vs. Vue
 (here some links to Angluar vs. React vs. Vue)
-#### C2. Using Windows Forms vs. WPF
+#### 3.2. Using Windows Forms vs. WPF
 (here some examples and links)
-#### C3. Using Razor vs. Blazor
+#### 3.3. Using Razor vs. Blazor
 (here some examples and links)
 
 ### 4. Security
