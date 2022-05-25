@@ -11,13 +11,18 @@
    * [0. Prerequisites](#0-prerequisites)
    * [1. WEB API](#1-WEB-API)
 		* [C1. Create Web API project](#C1-Create-Web-API-project)
-		* [C2. Test your app](#C2-Test-your-app)
-		* [C3. Exception Handling](#C3-Exception-Handling)
-		* [C4. Local drive access](#C4-Local-drive-access)
-		* [C5. Database access](#C5-Database-access)
-		* [C6. Create interface for data access](#C6-Create-interface-for-data-access)
-   * [2. Security](#3-Security)
-   * [3. Exercises](#4-Exercises)
+		* [C2. Test your app](#C2-Test-your-app)		
+		* [C4. Local drive access](#C3-Local-drive-access)
+    * [C4. Exception Handling](#C4-Exception-Handling)
+	 * [2. Database access](#C5-Database-access)
+    * [C1. ADO.NET](#C1-ADO-NET)
+		* [C2. Entity Framework](#C2-Entity-Framework)		
+	 * [3. Create interface for data access](#3-Create-interface-for-data-access)
+    * [C1. Using Angluar vs. React vs. Vue](#C1-Using-Angluar-vs-React-vs-Vue)
+		* [C2. Using Windows Forms vs. WPF](#C2-Using-Windows-Forms-vs-WPF)		
+		* [C3. Using Razor vs. Blazor](#C3-Using-Razor-vs-Blazor)
+   * [4. Security](#3-Security)
+   * [5. Exercises](#4-Exercises)
    * [OPT-1. ODBC](#opt-1-odbc)
    * [OPT-2. MongoDB](#opt-2-mongodb)
    * [OPT-3. OAuth](#opt-3-oauth)
@@ -172,21 +177,49 @@ During the course, we will create an application for online shopping. Each chapt
    Location, ProductCategory collection should be implemented as a generic "HashTable". 
    Location, ProductCategory will have a controller. 
    Stock will not have a controller. 
+
+Online Shop:
+ 
+ > Register an account on GitHub and accept the training [GitHub Classroom Assignment](https://classroom.github.com/a/qiaU7uWM). This will create a new GitHub repository for you. Clone this repository locally and checkout the `develop` branch. During the course of the training, you will commit and push your work on this branch.
+ >
+ > Go to "Visual Studio" and generate a new project ASP.NET Core Web API:
+ > - Project name: `shop`,
+ > - Solution: `ro.msg.learning`,
+ > - NuGet Pachages: `Web`, `Security`, `JPA`, `Flyway`, `H2`, `Lombok`.
+ >
+ > Extract the generated `zip` file into the previously cloned repository. Import this project into your IDE. You can delete the `mvnw`, `mvnw.cmd` and `.mvn` files / folders as you have Maven in the IDE anyway.
+ >
+ > Enable the [H2 console for your application](https://docs.spring.io/spring-boot/docs/2.1.4.RELEASE/reference/html/boot-features-sql.html#boot-features-sql-h2-console) and configure H2 to use a [file-based storage somewhere on your computer](https://stackoverflow.com/questions/37903105/how-to-configure-spring-boot-to-use-file-based-h2-database/37969181#37969181).
+
 #### C2. Test your app
 ![Data Model](./diagrams/Chapter2.png "Data Model")
-#### C3. Exception Handling
-test
-#### C4. Local drive access 
 
-#### C5. Database access
+#### C3. Local drive access 
+How to read/write files, how to log 
+#### C4. Exception Handling
+How to handle the exception and how to log exceptions
 
-#### C6. Create interface for data access
+### 2. Database access
 
+#### C1. ADO.NET
+(Describe how to connect to SQL Server database using ADO.NET )
 
-### 2. Security
+#### C2. Entity Framework
+(Describe how to connect to SQL Server database using Entity Framework )
 
+### 3. Create interface for data access
+Below are described 3 methods on how to access the database using c#
+#### C1. Using Angluar vs. React vs. Vue
+(here some links to Angluar vs. React vs. Vue)
+#### C2. Using Windows Forms vs. WPF
+(here some examples and links)
+#### C3. Using Razor vs. Blazor
+(here some examples and links)
 
-### 3. Exercises
+### 4. Security
+(Describe how to secure your c# API )
+
+### 5. Exercises
 
 Goal: Group business logic into service classes and expose this logic through REST interfaces.
 
