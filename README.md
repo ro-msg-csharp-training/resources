@@ -220,11 +220,11 @@ Further Reading:
 
 OnlineShop: Save product information and order information on local json files on disk.
 
-     -Every time a product is created a file must be created on disk with information about the product. When the product is edited, you will have to save those modifications in the product's file.
+ -Every time a product is created a file must be created on disk with information about the product. When the product is edited, you will have to save those modifications in the product's file.
 
-     -Every time an order is created a file must be created containing the order information.
+ -Every time an order is created a file must be created containing the order information.
   
-     -You will have to come up with an apropiate folder structure for this task
+ -You will have to come up with an apropiate folder structure for this task
 
 #### 1.4. Logging
 How to log errors/info 
