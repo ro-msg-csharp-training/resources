@@ -209,25 +209,49 @@ Required Reading:
  - [How to write to a text file](https://docs.microsoft.com/en-us/dotnet/csharp/programming-guide/file-system/how-to-write-to-a-text-file)
  - [How to read from a text file](https://docs.microsoft.com/en-us/dotnet/csharp/programming-guide/file-system/how-to-read-from-a-text-file)
 
-Further Reading:
- - [An alternative for serialization is Newtonsoft.Json](https://www.youtube.com/watch?v=hLYHE1kIOpo)
-
-	-it is important to know about Newtonsoft.Json, as it was the main library used for JSON serialization for C#, and it can be found in older projects
- - [Comparison of System.Text.Json and Newtonsoft.Json]()
- - [More about File system can be found here](https://docs.microsoft.com/en-us/dotnet/csharp/programming-guide/file-system/)
- - [File and Stream I/O]()
-
 
 OnlineShop: Save product information and order information on local json files on disk.
 
-  - Every time a product is created a file must be created on disk with information about the product. When the product is edited, you will have to save those modifications in the product's file.
+  - Every time a product is created a file must be created on disk with information about the product. 
+
+  - When a product is modified or deleted, this must reflect in the files saved on disk.
 
   - Every time an order is created a file must be created containing the order information.
   
   - You will have to come up with an apropiate folder structure for this task
 
+Further Reading:
+ - [An alternative for serialization is Newtonsoft.Json](https://www.youtube.com/watch?v=hLYHE1kIOpo)
+
+	-it is important to know about Newtonsoft.Json, as it was the main library used for JSON serialization for C#, and it can be found in older projects
+ - [Comparison of System.Text.Json and Newtonsoft.Json](https://inspiration.nlogic.ca/en/a-comparison-of-newtonsoft.json-and-system.text.json)
+ - [More about File system can be found here](https://docs.microsoft.com/en-us/dotnet/csharp/programming-guide/file-system/)
+ - [File and Stream I/O](https://docs.microsoft.com/en-us/dotnet/standard/io/)
+
+
 #### 1.4. Logging
-How to log errors/info 
+Goal: Understand how logging libraries work and how to log the necessary information from your application
+
+Required Reading:
+
+ - [Logging in .Net Overview](https://docs.microsoft.com/en-us/dotnet/core/extensions/logging?tabs=command-line)
+ - [Logging providers in .Net](https://docs.microsoft.com/en-us/dotnet/core/extensions/logging-providers)
+ - The most used way to log your data is in files on disk. This is achieved in .Net by using a third party provider. While there are multiple providers we will focus on NLog:
+   - [Getting started with Nlog in ASP.NET Core 6](https://github.com/NLog/NLog/wiki/Getting-started-with-ASP.NET-Core-6)
+   - [How to start logging with NLog](https://betterstack.com/community/guides/logging/net/how-to-start-logging-with-nlog)
+   - [Nlog Configuration file](https://github.com/NLog/NLog/wiki/Configuration-file)
+   - [Nlog ASP.NET Core 6 Example](https://github.com/NLog/NLog.Web/tree/master/examples/ASP.NET%20Core%206)
+
+Online Shop: Logging important actions like (Order, Product create/edit/delete and so on) will greatly assist in the support and development of your application.
+   
+   - you need to identify and log all the important actions in your application
+   
+   - it is your decision how you structure and what information goes into those logs to be as comprehensive as possible
+
+Future Reading:
+ - [Logging Best Practices](https://raygun.com/blog/c-sharp-logging-best-practices/)
+ - [How to use structured logging](https://github.com/nlog/nlog/wiki/How-to-use-structured-logging)
+ - [Use NLog configuration with appsettings.json](https://github.com/NLog/NLog.Extensions.Logging/wiki/NLog-configuration-with-appsettings.json)
 
 #### 1.5. Exception Handling
 How to handle the exception and how to log exceptions
