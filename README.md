@@ -205,12 +205,72 @@ How to log errors/info
 How to handle the exception and how to log exceptions
 
 ### 2. Database access
+__Goals:__
+a) Understanding the need and advantages of databases compared to the file system.
+b) Principles of databases.
+c) Understanding, comparing, contrasting, using and integrating different database frameworks into a web application.
+e) Choosing and using relational and non-relational databases.
 
-#### 2.1. ADO.NET
-(Describe how to connect to SQL Server database using ADO.NET )
+__Why databases?__
+* You can query data in a database (ask it questions).
+* You can look up data from a database relatively rapidly.
+* You can relate data from two different tables together using JOINs.
+* You can create meaningful reports from data in a database.
+* Your data has a built-in structure to it.
+* Information of a given type is always stored only once.
+* Databases are ACID.
+* Databases are fault-tolerant.
+* Databases can handle very large data sets.
+* Databases are concurrent; multiple users can use them at the same time without corrupting the data.
+* Databases scale well.
 
-#### 2.2. Entity Framework
-(Describe how to connect to SQL Server database using Entity Framework )
+Required reading: [File System vs. Database](https://dzone.com/articles/which-is-better-saving-files-in-database-or-in-fil)
+
+Further reading: [Why use a database instead of saving data to disk?](https://arstechnica.com/information-technology/2013/05/why-use-a-database-instead-of-just-saving-your-data-to-disk/)
+
+Online Shop: Ask yourself the following questions: what happens if you want to update a numeric quantity into a very large products/orders data file that stores online shop information? What happens if during the time spent with reading/searching a large file, other simultaneous requests come for writing or modifying or deleting the same quantities or entries and what happens if during that exact time there is a power shortage? Can databases address some of these problems?
+
+#### 2.1. Entity Framework
+Goal: Understanding how and why Entity Framework can be used to automate all types of SQL database-related activities for an application, and how using the frameowrk developers can work at a higher level of abstraction when they deal with data and can create and maintain the data-oriented application with less code and database-related knowledege.
+
+Required Reading: [.NET 6.0 - Connect to SQL Server with Entity Framework Core](https://jasonwatmore.com/post/2022/03/18/net-6-connect-to-sql-server-with-entity-framework-core)
+
+Online Shop: Automatically create/update an SQL Server database from code using EF Core migrations that mirrors the model from Chapter 1 based upon the example given in the previous tutorial and adapt given example to connect, control & manage and perform CRUD operations on the SQL DB.
+
+Further Reading:
+* [Entity Framework Core](https://www.entityframeworktutorial.net/efcore/entity-framework-core.aspx)
+* [CRUD with a .NET 6 Web API & Entity Framework Core](https://www.youtube.com/watch?v=Fbf_ua2t6v4)
+* [NET 6 Web API with Entity Framework Core and SQL Server](https://www.youtube.com/watch?v=rzPFEuKlPhM)
+
+#### 2.2. ADO.NET
+Goal: Understanding how ADO.NET provides consistent access to data sources such as SQL Server and how data-sharing consumer applications can use ADO.NET to connect to these data sources and retrieve, handle, and update the data that they contain.
+
+Required Reading: ADO.NET by building CRUD features in ASP.NET Core Application
+1. [Learn ADO.NET by building CRUD features in ASP.NET Core Application](https://www.yogihosting.com/ado-net-aspnet-core/)
+2. [Create Records using ADO.NET in ASP.NET Core Application](https://www.yogihosting.com/create-records-ado-net-aspnet-core/)
+3. [Read Records using ADO.NET in ASP.NET Core Application](https://www.yogihosting.com/read-records-ado-net-aspnet-core/)
+4. [Update Records using ADO.NET in ASP.NET Core Application](https://www.yogihosting.com/update-records-ado-net-aspnet-core/)
+5. [Delete Records using ADO.NET in ASP.NET Core Application](https://www.yogihosting.com/delete-records-ado-net-aspnet-core/)
+6. [SqlBulkCopy class of ADO.NET](https://www.yogihosting.com/sqlbulkcopy-class-of-ado-net/)
+
+Online Shop: Create an SQL database that mirrors the model from Chapter 1 based upon the example given in the previous tutorials and adapt and test given example to connect, control & manage and perform CRUD operations on the SQL DB.
+
+Further Reading:
+* [Compare and contrast ADO and Entity Framework](https://blog.devart.com/ado-net-vs-entity-framework.html)
+* [How to Use ADO .NET in ASP MVC .NET 6 Core application?](https://www.youtube.com/watch?v=QN4gKyCEzHA)
+
+#### 2.3. MongoDB
+Goal: Understanding the __[difference between a relational and a non-relational](https://www.integrate.io/blog/the-sql-vs-nosql-difference/)__ database and adapting the OnlineShop Web Api to have persistence into a NoSql model database such as MongoDb.
+
+Required Reading:
+* [Create a web API with ASP.NET Core and MongoDB](https://docs.microsoft.com/en-us/aspnet/core/tutorials/first-mongo-app?view=aspnetcore-6.0&tabs=visual-studio)
+
+Online Shop: Create a MongoDB NoSQL database that mirrors the model from Chapter 1 based upon the example given in the previous tutorial and adapt and test given example to connect, control & manage and perform CRUD operations on the DB.
+
+Further Reading:
+* [Install MongoDB Community Edition on Windows](https://www.mongodb.com/docs/manual/tutorial/install-mongodb-on-windows/)
+* [Build Your First .NET Core Application with MongoDB Atlas](https://www.mongodb.com/developer/languages/csharp/build-first-dotnet-core-application-mongodb-atlas/)
+* [Create a RESTful API with .NET Core and MongoDB](https://www.mongodb.com/developer/how-to/create-restful-api-dotnet-core-mongodb/)
 
 ### 3. Create interface for data access
 Below are described 3 methods on how to access the database using c#
