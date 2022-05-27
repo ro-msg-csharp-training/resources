@@ -170,7 +170,7 @@ During the course, we will create an application for online shopping. Each chapt
 
    After you create the project please inspect all the classes that were made. 
    In the project create the Folder Model where you will put your data Model. 
-   As a start-up sample, you have in![Data Model](./Sources/Chapter1/Startup_Chapter/) the project created with one class implemented.
+   As a start-up sample, you have in [Sources/Chapter1/Startup_Chapter](./Sources/Chapter1/Startup_Chapter/) the project created with one class implemented.
    
 
    You should create the rest of the data models and controls. The classes are shown below diagram: 
@@ -186,25 +186,33 @@ Online Shop:
  > Go to "Visual Studio" and generate a new project ASP.NET Core Web API:
  > - Project name: `shop`,
  > - Solution: `ro.msg.learning`,
- > - NuGet Pachages: `Web`, `Security`, `JPA`, `Flyway`, `H2`, `Lombok`.
- >
- > Extract the generated `zip` file into the previously cloned repository. Import this project into your IDE. You can delete the `mvnw`, `mvnw.cmd` and `.mvn` files / folders as you have Maven in the IDE anyway.
- >
- > Enable the [H2 console for your application](https://docs.spring.io/spring-boot/docs/2.1.4.RELEASE/reference/html/boot-features-sql.html#boot-features-sql-h2-console) and configure H2 to use a [file-based storage somewhere on your computer](https://stackoverflow.com/questions/37903105/how-to-configure-spring-boot-to-use-file-based-h2-database/37969181#37969181).
+
 
 #### 1.2. Test your app
-How to compile and run your applicantion please read the following: https://docs.microsoft.com/en-us/visualstudio/ide/compiling-and-building-in-visual-studio?view=vs-2022 
-How to debug code please read the following: https://docs.microsoft.com/en-us/visualstudio/get-started/csharp/tutorial-debugger?view=vs-2022
-Online shop application built on Cpater 1 has included Kestrel server inside. The Kestrel web server is a new web server as part of ASP.NET Core. It is now the preferred web server for all new ASP.NET applications. By default Kestrel will generate a test page for you application. This is a good start point to do a manual testing of your application. 
-Loock at the screenshots from folder to see how you can test your application. 
+
+Goal: 
+   Debug and testing your aplication. 
+
+- [How to compile and run your applicantion](https://docs.microsoft.com/en-us/visualstudio/ide/compiling-and-building-in-visual-studio?view=vs-2022)
+- [How to debug code](https://docs.microsoft.com/en-us/visualstudio/get-started/csharp/tutorial-debugger?view=vs-2022)
+
+The online shop application built on Cpater 1 has included the Kestrel server inside. The Kestrel web server is a new web server as part of ASP.NET Core. It is now the preferred web server for all new ASP.NET applications. By default, Kestrel will generate a test page for your application. This is a good starting point to do manual testing of your application.
+
+Look at the screenshots from folder [/Sources/Chapter2](./Sources/Chapter2/) to see how you can test your application. 
 
 
-For other type of testing you can use difrent tools like: 
-    -Postman (https://www.postman.com/)
-    -Curl (https://curl.se/docs/)
 
-Please complete the solution with the relation from the diagram. 
-![Data Model](./diagrams/Chapter2.png "Data Model")
+Online Shop:  
+  - complete the solution with the relation from the diagram. 
+
+    ![Data Model](./diagrams/Chapter2.png "Data Model")
+    
+  - run, debug and  manual test the application with help page  
+
+(Optional) For other type of testing, you can use different tools like: 
+  - Postman (https://www.postman.com/)
+  - Curl (https://curl.se/docs/)
+
 
 #### 1.3. Local drive access 
 
