@@ -193,6 +193,17 @@ Online Shop:
  > Enable the [H2 console for your application](https://docs.spring.io/spring-boot/docs/2.1.4.RELEASE/reference/html/boot-features-sql.html#boot-features-sql-h2-console) and configure H2 to use a [file-based storage somewhere on your computer](https://stackoverflow.com/questions/37903105/how-to-configure-spring-boot-to-use-file-based-h2-database/37969181#37969181).
 
 #### 1.2. Test your app
+How to compile and run your applicantion please read the following: https://docs.microsoft.com/en-us/visualstudio/ide/compiling-and-building-in-visual-studio?view=vs-2022 
+How to debug code please read the following: https://docs.microsoft.com/en-us/visualstudio/get-started/csharp/tutorial-debugger?view=vs-2022
+Online shop application built on Cpater 1 has included Kestrel server inside. The Kestrel web server is a new web server as part of ASP.NET Core. It is now the preferred web server for all new ASP.NET applications. By default Kestrel will generate a test page for you application. This is a good start point to do a manual testing of your application. 
+Loock at the screenshots from folder to see how you can test your application. 
+
+
+For other type of testing you can use difrent tools like: 
+    -Postman (https://www.postman.com/)
+    -Curl (https://curl.se/docs/)
+
+Please complete the solution with the relation from the diagram. 
 ![Data Model](./diagrams/Chapter2.png "Data Model")
 
 #### 1.3. Local drive access 

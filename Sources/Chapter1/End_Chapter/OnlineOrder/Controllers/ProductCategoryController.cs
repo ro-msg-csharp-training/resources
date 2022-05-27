@@ -13,7 +13,11 @@ namespace OnlineOrder.Controllers
         private IDictionary<string, ProductCategory> _category;
 
         private readonly ILogger<ProductController> _logger;
-
+        public ProductCategoryController(IDictionary<string, ProductCategory> category,ILogger<ProductController> logger)
+        {
+            _category = category;
+            _logger = logger;
+        }
         // GET: api/<ProductCategoryController>
         [HttpGet]
         public IEnumerable<ProductCategory> Get()
