@@ -14,7 +14,7 @@
 		* [1.2. Test your app](#12-test-your-app)
 		* [1.3. Local drive access](#13-local-drive-access)
 		* [1.4. Logging](#14-logging)    
-		* [1.5. Exception Handling](#14-exception-handling)
+		* [1.5. Exception Handling](#15-exception-handling)
    * [2. Database access](#2-database-access)
 		* [2.1. ADO.NET](#21-adonet)
 		* [2.2. Entity Framework](#22-entity-framework)		
@@ -160,8 +160,8 @@ Further Resources:
 ## The APP
 During the course, we will create an application for online shopping. Each chapter will cover different aspects of the C# language. The final application will be a client-server application.
 
-### 1. WEB API
-#### 1.1. Create Web API project
+## 1. WEB API
+### 1.1. Create Web API project
    For the first chapter please create a simple Web API using .Net Core.
    To create the application open Visual Studio, choose a Create a New Project, Select ASP.NET Core Web API project and follow the steps. Please check the following the images to select the right options: 
    ![Data Model](./Sources/Chapter1/Startup_Chapter/OnlineOrder/Startup_Chapter/ScreenShots/1.jpg)
@@ -188,7 +188,7 @@ Online Shop:
  > - Solution: `ro.msg.learning`,
 
 
-#### 1.2. Test your app
+### 1.2. Test your app
 
 Goal: 
    Debug and testing your aplication. 
@@ -214,7 +214,7 @@ Online Shop:
   - Curl (https://curl.se/docs/)
 
 
-#### 1.3. Local drive access 
+### 1.3. Local drive access 
 
 Goal: Understand IO Operations and JSON Serialization 
 
@@ -248,7 +248,7 @@ Further Reading:
  - [File and Stream I/O](https://docs.microsoft.com/en-us/dotnet/standard/io/)
 
 
-#### 1.4. Logging
+### 1.4. Logging
 Goal: Understand how logging libraries work and how to log the necessary information from your application
 
 Required Reading:
@@ -272,7 +272,7 @@ Future Reading:
  - [How to use structured logging](https://github.com/nlog/nlog/wiki/How-to-use-structured-logging)
  - [Use NLog configuration with appsettings.json](https://github.com/NLog/NLog.Extensions.Logging/wiki/NLog-configuration-with-appsettings.json)
 
-#### 1.5. Exception Handling
+### 1.5. Exception Handling
 Goal: 
   - Understand exceptions and Exception Handling
   - Logging Exception 
@@ -289,7 +289,7 @@ Online Shop:
   - Log the exception in logger 
   - Set the looger to write the exeption in the event viewer 
 
-### 2. Database access
+## 2. Database access
 __Goals:__
 a) Understanding the need and advantages of databases compared to the file system.
 b) Principles of databases.
@@ -315,7 +315,7 @@ Online Shop: Ask yourself the following questions: what happens if you want to u
 
 Further reading: [Why use a database instead of saving data to disk?](https://arstechnica.com/information-technology/2013/05/why-use-a-database-instead-of-just-saving-your-data-to-disk/)
 
-#### 2.1. Entity Framework
+### 2.1. Entity Framework
 Goal: Understanding how and why Entity Framework can be used to automate all types of SQL database-related activities for an application, and how using the frameowrk developers can work at a higher level of abstraction when they deal with data and can create and maintain the data-oriented application with less code and database-related knowledege.
 
 Required Reading: [.NET 6.0 - Connect to SQL Server with Entity Framework Core](https://jasonwatmore.com/post/2022/03/18/net-6-connect-to-sql-server-with-entity-framework-core)
@@ -327,7 +327,7 @@ Further Reading:
 * [CRUD with a .NET 6 Web API & Entity Framework Core](https://www.youtube.com/watch?v=Fbf_ua2t6v4)
 * [NET 6 Web API with Entity Framework Core and SQL Server](https://www.youtube.com/watch?v=rzPFEuKlPhM)
 
-#### 2.2. ADO.NET
+### 2.2. ADO.NET
 Goal: Understanding how ADO.NET provides consistent access to data sources such as SQL Server and how data-sharing consumer applications can use ADO.NET to connect to these data sources and retrieve, handle, and update the data that they contain.
 
 Required Reading: ADO.NET by building CRUD features in ASP.NET Core Application
@@ -344,7 +344,7 @@ Further Reading:
 * [Compare and contrast ADO and Entity Framework](https://blog.devart.com/ado-net-vs-entity-framework.html)
 * [How to Use ADO .NET in ASP MVC .NET 6 Core application?](https://www.youtube.com/watch?v=QN4gKyCEzHA)
 
-#### 2.3. MongoDB
+### 2.3. MongoDB
 Goal: Understanding the __[difference between a relational and a non-relational](https://www.integrate.io/blog/the-sql-vs-nosql-difference/)__ database and adapting the OnlineShop Web Api to have persistence into a NoSql model database such as MongoDb.
 
 Required Reading:
@@ -357,19 +357,54 @@ Further Reading:
 * [Build Your First .NET Core Application with MongoDB Atlas](https://www.mongodb.com/developer/languages/csharp/build-first-dotnet-core-application-mongodb-atlas/)
 * [Create a RESTful API with .NET Core and MongoDB](https://www.mongodb.com/developer/how-to/create-restful-api-dotnet-core-mongodb/)
 
-### 3. Create interface for data access
-Below are described 3 methods on how to access the database using c#
-#### 3.1. Using Angluar vs. React vs. Vue
-(here some links to Angluar vs. React vs. Vue)
-#### 3.2. Using Windows Forms vs. WPF
-(here some examples and links)
-#### 3.3. Using Razor vs. Blazor
-(here some examples and links)
+## 3. Create interface for data access
+Below are described 3 methods on how to access the database using c#, depending on the implementation, you can choose to use desktop or web applications to access the database. 
+### 3.1. Using Angluar vs. React vs. Vue
 
-### 4. Security
-(Describe how to secure your c# API )
+There are three frameworks for building web applications that every frontend developer has heard about: React, Vue, and Angular.
+React is a UI library, Angular is a fully-fledged front-end framework, while Vue.js is a progressive framework.
+They can be used almost interchangeably to build front-end applications, but they’re not 100 percent the same, so it makes sense to compare them and understand their differences.
+Each framework is component-based and allows the rapid creation of UI features.
 
-### 5. Exercises
+* [Angular](https://github.com/ro-msg-angular-training/resources) AngularJS, the original framework, is an MVC (Model-View-Controller)) framework. But in Angular 2, there’s no strict association with MV*-patterns as it is also component-based.
+Projects in Angular are structured into Modules, Components, and Services. Each Angular application has at least one root component and one root module. Each component in Angular contains a Template, a Class that defines the application logic, and MetaData (Decorators). The metadata for a component tells Angular where to find the building blocks that it needs to create and present its view.
+
+* [React](https://github.com/ro-msg-react-training/resources) is based on JavaScript, but it’s mostly combined with JSX (JavaScript XML), a syntax extension that allows you to create elements that contain HTML and JavaScript at the same time.
+Anything you create with JSX could also be created with the React JavaScript API, but most developers prefer JSX because it’s more intuitive.
+
+* [Vue](https://vuejs.org/guide/introduction.html) The Vue.js core library focuses on the View layer only. It’s called a progressive framework because you can extend its functionality with official and third-party packages, such as Vue Router or Vuex, to turn it into an actual framework.
+Although Vue is not strictly associated with the MVVM (Model-View-ViewModel) pattern, its design was partly inspired by it. With Vue, you’ll be working mostly on the ViewModel layer, to make sure that the application data is processed in a way that allows the framework to render an up-to-date View.
+### 3.2. Using Windows Forms vs. WPF
+* [WinForms](https://www.guru99.com/c-sharp-windows-forms-application.html)  Windows Form Application : WinForms, as the name suggests, is basically a GUI-based approach introduced to the .NET framework. Prior to WPF and Silverlight, it was the main API for .NET that is being used to build GUI. It does not require any type of support other than runtime and OS for developing a standalone application. 
+One can develop apps that are easy to deploy, update, manage, and work offline while connected to the Internet. The development of WinForms is very simple as it is only based on the drag and drop placement of UI controls on canvas. It is the old platform for developing desktop applications.  
+
+
+* [WPF](https://wpf-tutorial.com/) Windows Presentation Foundation: WPF, as the name suggests, is a UI framework used for developing Windows or desktop client applications. It is the latest approach to the GUI framework being used with the .NET framework. It was introduced to develop Windows client apps that run on the Windows operating system, and the next generation of Windows forms. It has all the functionality that is being required to develop, run, execute, manage, and handle Windows client applications. 
+It generally provides holistic means for combining or integrating UI, 2D and 3D graphics, digital media, and documents. It is responsible for developing, displaying, and manipulating UI, documents, images, etc., in Windows 7 and later operating systems. It is the current platform for developing windows applications.  
+
+
+### 3.3. Using Razor vs. Blazor
+
+* [Razor](https://www.learnrazorpages.com/) is a templating engine that combines C# with HTML to build dynamic web content.
+
+* [Blazor](https://dotnet.microsoft.com/en-us/learn/aspnet/blazor-tutorial/intro) is a component-based, single-page app framework for building client-side web apps using .NET that works well with all modern browsers via WebAssembly for client-side Blazor. Server-side Blazor ASP.NET Core app runs on server and makes use of SignalR connection to communicate with the client (browser). It works with all modern browsers. In other words, Blazor is a hosting model for Razor components.
+
+## 4. Security
+
+* [Security] (https://docs.microsoft.com/en-us/aspnet/core/security/?view=aspnetcore-6.0) 
+Code access security is a mechanism that controls the access code to protect resources and operations. In NET Framework, code access security performs functions like defining permission, enabling administrators to configure security policy, allowing code to request the permissions it requires in order to run, granting permissions to each assembly that is loaded, based on the permissions requested by the code and it enables code to demand that its callers have specific permissions.
+
+Code access security is a mechanism that grants/denies access to resources within a method call. For example, code written by a person may be allowed to write to the disk while code from another one may be forbidden from accessing the disk. This control can be enforced even if the code written by both of them is used within a single application.
+
+C# security vulnerabilities includes topics such as :
+* [XML vulnerabilities](https://pvs-studio.com/en/blog/posts/csharp/0918/)
+* [XSS basics of web security](https://docs.microsoft.com/en-us/aspnet/core/security/cross-site-scripting?view=aspnetcore-6.0)
+* [Authentication and authorization in ASP.NET](https://docs.microsoft.com/en-us/aspnet/web-api/overview/security/authentication-and-authorization-in-aspnet-web-api)
+* [SQL injection](https://jonathancrozier.com/blog/preventing-sql-injection-in-c-sharp-applications)
+* [Regular expressions](https://docs.microsoft.com/en-us/archive/msdn-magazine/2010/may/security-briefs-regular-expression-denial-of-service-attacks-and-defenses)
+* [Concurrency](https://docs.microsoft.com/en-us/aspnet/core/data/ef-mvc/concurrency?view=aspnetcore-6.0)
+* [Other platform-related security issues](https://docs.microsoft.com/en-us/dotnet/standard/security/)
+## 5. Exercises
 
 Goal: Group business logic into service classes and expose this logic through REST interfaces.
 
@@ -404,7 +439,7 @@ Further Resources:
  
 
 
-### OPT-1. ODBC
+## OPT-1. ODBC
 
 ## OPT-2. MongoDB
 
