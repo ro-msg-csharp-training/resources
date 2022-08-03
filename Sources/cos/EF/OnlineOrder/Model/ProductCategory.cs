@@ -1,11 +1,22 @@
-﻿namespace OnlineOrder.Model
+﻿
+using System.ComponentModel.DataAnnotations;
+using System.Text.Json.Serialization;
+
+namespace OnlineOrder.Model
+
+
 {
-    public class ProductCategory
+    public class ProductCategory : ProductCategoryDto
     {
-        public int Id { get; set; }
+        
+        public ICollection<Product> Products { get; set; }
 
-        public string Name { get; set; }
-
-        public string Description { get; set; }
+        public ProductCategory()
+        {
+            Products = new HashSet<Product>();
+        }
     }
+
+    
+
 }
