@@ -23,26 +23,39 @@ namespace OnlineOrder.Controllers
             _logger = logger ?? throw new ArgumentNullException("logger");
         }
 
-        // GET: api/Stocks
-        [HttpGet]
-        public async Task<ActionResult<IEnumerable<Stock>>> GetStock()
+
+
+      
+        [HttpGet("Product/{productId}")]
+        public async Task<ActionResult<IList<Stock>>> GetProductStock(int productId)
         {
-          if (_context.Stocks == null)
-          {
-              return NotFound();
-          }
-            return await _context.Stocks.ToListAsync();
+            if (_context.Stocks == null)
+            {
+                return NotFound();
+            }
+            var stock = await _context.Stocks.Where(c => c.ProductId == productId).ToListAsync();
+
+            if (stock == null)
+            {
+                return NotFound("Product is invalid.");
+            }
+
+            return stock;
         }
 
-        // GET: api/Stocks/5
-        [HttpGet("{id}")]
-        public async Task<ActionResult<Stock>> GetStock(int id)
+
+        //// GET: api/Stocks/5
+
+        
+        [HttpGet("Location/{locationId}")]
+      
+        public async Task<ActionResult<IList<Stock>>> GetLocationStock(int locationId)
         {
-          if (_context.Stocks == null)
-          {
-              return NotFound();
-          }
-            var stock = await _context.Stocks.FindAsync(id);
+            if (_context.Stocks == null)
+            {
+                return NotFound();
+            }
+            var stock = await _context.Stocks.Where(c => c.LocationId == locationId).ToListAsync();
 
             if (stock == null)
             {
@@ -52,75 +65,104 @@ namespace OnlineOrder.Controllers
             return stock;
         }
 
-        // PUT: api/Stocks/5
+
+
+        // POST: api/Stocks
         // To protect from overposting attacks, see https://go.microsoft.com/fwlink/?linkid=2123754
-        [HttpPut("{id}")]
-        public async Task<IActionResult> PutStock(int id, Stock stock)
+        [HttpPost("Add")]
+        public async Task<ActionResult<Stock>> AddStock(StockDto stockDto)
         {
-            if (id != stock.Id)
+            if (stockDto.Quantity <=0) return BadRequest("Quanty should be greater than 0");
+
+            if (stockDto.ProductId==0 && stockDto.LocationId==0) return BadRequest();
+
+              var product= _context.Products.FirstOrDefault(c => c.Id == stockDto.ProductId );
+
+             if (product == null) return NotFound("Product not found");
+
+
+              var location = _context.Locations.FirstOrDefault(c => c.Id == stockDto.LocationId);
+
+              if (location == null) return NotFound("Location not found");
+
+
+            var stock = _context.Stocks.FirstOrDefault(c => c.ProductId == stockDto.ProductId && c.LocationId == stockDto.LocationId);
+
+            if (stock == null)
             {
-                return BadRequest();
+                stock = stockDto.Create();
+                _context.Stocks.Add(stock);
+            }
+            else
+            {
+                _context.Entry(stock).State = EntityState.Modified;
+                stock.Quantity += stockDto.Quantity;
+
             }
 
-            _context.Entry(stock).State = EntityState.Modified;
+            
+            await _context.SaveChangesAsync();
 
-            try
-            {
-                await _context.SaveChangesAsync();
-            }
-            catch (DbUpdateConcurrencyException)
-            {
-                if (!StockExists(id))
-                {
-                    return NotFound();
-                }
-                else
-                {
-                    throw;
-                }
-            }
-
-            return NoContent();
+            return new OkObjectResult(stock);
         }
 
         // POST: api/Stocks
         // To protect from overposting attacks, see https://go.microsoft.com/fwlink/?linkid=2123754
-        [HttpPost]
-        public async Task<ActionResult<Stock>> PostStock(Stock stock)
+        [HttpPost("Remove")]
+        public async Task<ActionResult<Stock>> RemoveStock(StockDto stockDto)
         {
-          if (_context.Stocks == null)
-          {
-              return Problem("Entity set 'OnlineOrderContext.Stock'  is null.");
-          }
-            _context.Stocks.Add(stock);
-            await _context.SaveChangesAsync();
 
-            return CreatedAtAction("GetStock", new { id = stock.Id }, stock);
-        }
+            if (stockDto.Quantity <= 0) return BadRequest("Quanty should be greater than 0");
 
-        // DELETE: api/Stocks/5
-        [HttpDelete("{id}")]
-        public async Task<IActionResult> DeleteStock(int id)
-        {
-            if (_context.Stocks == null)
-            {
-                return NotFound();
-            }
-            var stock = await _context.Stocks.FindAsync(id);
+            if (stockDto.ProductId == 0 && stockDto.LocationId == 0) return BadRequest();
+
+            var product = _context.Products.FirstOrDefault(c => c.Id == stockDto.ProductId);
+
+            if (product == null) return NotFound("Product not found");
+
+
+            var location = _context.Locations.FirstOrDefault(c => c.Id == stockDto.LocationId);
+
+            if (location == null) return NotFound("Location not found");
+
+
+            var stock = _context.Stocks.FirstOrDefault(c => c.ProductId == stockDto.ProductId && c.LocationId == stockDto.LocationId);
+
             if (stock == null)
             {
-                return NotFound();
+                return NotFound($"Product {product.Name} is not in stock at location {location.Name}");
+            }
+            else
+            {
+                if (stock.Quantity < stockDto.Quantity) return new  OkObjectResult("the stock is not enough");
+                if (stock.Quantity == stockDto.Quantity)
+                {
+                    _context.Entry(stock).State = EntityState.Deleted;
+                    stock.Quantity = 0;
+                 
+
+
+                }
+                else
+                {
+                    _context.Entry(stock).State = EntityState.Modified;
+                    stock.Quantity -= stockDto.Quantity;
+                    
+
+                }
             }
 
-            _context.Stocks.Remove(stock);
             await _context.SaveChangesAsync();
 
-            return NoContent();
+            return new OkObjectResult(stock);
+
         }
 
-        private bool StockExists(int id)
+
+
+        private bool ProductExists(int id)
         {
-            return (_context.Stocks?.Any(e => e.Id == id)).GetValueOrDefault();
+            return (_context.Products?.Any(e => e.Id == id)).GetValueOrDefault();
         }
     }
 }

@@ -2,6 +2,15 @@
 using Microsoft.Extensions.DependencyInjection;
 using OnlineOrder.Data;
 using OnlineOrder.Controllers;
+using NLog.Web;
+using NLog;
+
+
+
+
+var logger = NLog.LogManager.Setup().LoadConfigurationFromAppSettings().GetCurrentClassLogger();
+logger.Debug("init main");
+
 var builder = WebApplication.CreateBuilder(args);
 builder.Services.AddDbContext<OnlineOrderContext>(options =>
     options.UseSqlServer(builder.Configuration.GetConnectionString("OnlineOrderContext") ?? throw new InvalidOperationException("Connection string 'OnlineOrderContext' not found.")));
@@ -13,6 +22,10 @@ builder.Services.AddControllers();
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 
+
+// NLog: Setup NLog for Dependency injection
+builder.Logging.ClearProviders();
+builder.Host.UseNLog();
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.

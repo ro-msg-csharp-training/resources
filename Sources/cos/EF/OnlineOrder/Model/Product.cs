@@ -6,8 +6,9 @@ namespace OnlineOrder.Model
 {
     public class Product : ProductDto
     {
-
+        [JsonIgnore]
         public virtual ProductCategory Category { get; set; } = null!;
+        [JsonIgnore]
         public virtual ICollection<Stock> Stocks { get; set; }
 
         public  void Edit(Product product)

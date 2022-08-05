@@ -27,6 +27,34 @@ namespace OnlineOrder.Model
             };
         }
 
+
+        public static Stock Create(this StockDto stockDto)
+        {
+            return new Stock
+            {
+                LocationId = stockDto.LocationId,
+                ProductId = stockDto.ProductId,
+                Quantity = stockDto.Quantity
+            };
+          }
+        public static ProductDto ToBase(this Product product)
+        {
+            return product;
+        }
+
+        public static async IAsyncEnumerable<T> WhereAsync<T>(this IEnumerable<T> source, Func<T, Task<bool>> predicate)
+        {
+            foreach (var item in source)
+            {
+                if (await (predicate(item)))
+                {
+                    yield return item;
+                }
+            }
+        }
+
+
+
         public static Location Create(this LocationDto locationDto)
         {
             return new Location

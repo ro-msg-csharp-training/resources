@@ -8,7 +8,7 @@ namespace OnlineOrder.Model
 {
     public class ProductCategory : ProductCategoryDto
     {
-        
+     
         public ICollection<Product> Products { get; set; }
 
         public ProductCategory()

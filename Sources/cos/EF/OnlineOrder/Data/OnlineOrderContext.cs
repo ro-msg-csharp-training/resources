@@ -92,13 +92,13 @@ namespace OnlineOrder.Data
         }
 
        
-        public DbSet<OnlineOrder.Model.Product> Products { get; set; } = default;
+        public DbSet<Product> Products { get; set; } = default;
 
-        public DbSet<OnlineOrder.Model.Location> Locations { get; set; } 
+        public DbSet<Location> Locations { get; set; } 
 
-        public DbSet<OnlineOrder.Model.ProductCategory> ProductCategories { get; set; }
+        public DbSet<ProductCategory> ProductCategories { get; set; }
 
-        public DbSet<OnlineOrder.Model.Stock> Stocks { get; set; }
+        public DbSet<Stock> Stocks { get; set; }
 
     }
 }
