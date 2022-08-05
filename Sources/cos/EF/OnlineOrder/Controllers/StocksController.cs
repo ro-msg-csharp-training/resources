@@ -29,18 +29,26 @@ namespace OnlineOrder.Controllers
         [HttpGet("Product/{productId}")]
         public async Task<ActionResult<IList<Stock>>> GetProductStock(int productId)
         {
-            if (_context.Stocks == null)
+            try
             {
-                return NotFound();
-            }
-            var stock = await _context.Stocks.Where(c => c.ProductId == productId).ToListAsync();
+                if (_context.Stocks == null)
+                {
+                    return NotFound();
+                }
+                var stock = await _context.Stocks.Where(c => c.ProductId == productId).ToListAsync();
 
-            if (stock == null)
+                if (stock == null)
+                {
+                    return NotFound("Product is invalid.");
+                }
+
+                return stock;
+            }
+            catch(Exception ex)
             {
-                return NotFound("Product is invalid.");
-            }
 
-            return stock;
+                throw;
+            }
         }
 
 
