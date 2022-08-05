@@ -46,8 +46,8 @@ namespace OnlineOrder.Controllers
             }
             catch(Exception ex)
             {
-
-                throw;
+                _logger.LogError(ex, $"{nameof(GetProductStock)} failed. ProductID {productId}");
+                  return Problem($"{nameof(GetProductStock)} internall error");
             }
         }
 
@@ -59,6 +59,7 @@ namespace OnlineOrder.Controllers
       
         public async Task<ActionResult<IList<Stock>>> GetLocationStock(int locationId)
         {
+            try { 
             if (_context.Stocks == null)
             {
                 return NotFound();
@@ -71,6 +72,12 @@ namespace OnlineOrder.Controllers
             }
 
             return stock;
+            }
+            catch (Exception ex)
+            {
+                _logger.LogError(ex, $"{nameof(GetLocationStock)} failed. LocationId {locationId}");
+                return Problem($"{nameof(GetProductStock)} internall error");
+            }
         }
 
 
@@ -80,6 +87,7 @@ namespace OnlineOrder.Controllers
         [HttpPost("Add")]
         public async Task<ActionResult<Stock>> AddStock(StockDto stockDto)
         {
+            try { 
             if (stockDto.Quantity <=0) return BadRequest("Quanty should be greater than 0");
 
             if (stockDto.ProductId==0 && stockDto.LocationId==0) return BadRequest();
@@ -112,6 +120,12 @@ namespace OnlineOrder.Controllers
             await _context.SaveChangesAsync();
 
             return new OkObjectResult(stock);
+            }
+            catch (Exception ex)
+            {
+                _logger.LogError(ex, $"{nameof(AddStock)} failed. StockDto {stockDto}");
+                return Problem($"{nameof(AddStock)} internall error");
+            }
         }
 
         // POST: api/Stocks
@@ -119,51 +133,57 @@ namespace OnlineOrder.Controllers
         [HttpPost("Remove")]
         public async Task<ActionResult<Stock>> RemoveStock(StockDto stockDto)
         {
-
-            if (stockDto.Quantity <= 0) return BadRequest("Quanty should be greater than 0");
-
-            if (stockDto.ProductId == 0 && stockDto.LocationId == 0) return BadRequest();
-
-            var product = _context.Products.FirstOrDefault(c => c.Id == stockDto.ProductId);
-
-            if (product == null) return NotFound("Product not found");
-
-
-            var location = _context.Locations.FirstOrDefault(c => c.Id == stockDto.LocationId);
-
-            if (location == null) return NotFound("Location not found");
-
-
-            var stock = _context.Stocks.FirstOrDefault(c => c.ProductId == stockDto.ProductId && c.LocationId == stockDto.LocationId);
-
-            if (stock == null)
+            try
             {
-                return NotFound($"Product {product.Name} is not in stock at location {location.Name}");
-            }
-            else
-            {
-                if (stock.Quantity < stockDto.Quantity) return new  OkObjectResult("the stock is not enough");
-                if (stock.Quantity == stockDto.Quantity)
+                if (stockDto.Quantity <= 0) return BadRequest("Quanty should be greater than 0");
+
+                if (stockDto.ProductId == 0 && stockDto.LocationId == 0) return BadRequest();
+
+                var product = _context.Products.FirstOrDefault(c => c.Id == stockDto.ProductId);
+
+                if (product == null) return NotFound("Product not found");
+
+
+                var location = _context.Locations.FirstOrDefault(c => c.Id == stockDto.LocationId);
+
+                if (location == null) return NotFound("Location not found");
+
+
+                var stock = _context.Stocks.FirstOrDefault(c => c.ProductId == stockDto.ProductId && c.LocationId == stockDto.LocationId);
+
+                if (stock == null)
                 {
-                    _context.Entry(stock).State = EntityState.Deleted;
-                    stock.Quantity = 0;
-                 
-
-
+                    return NotFound($"Product {product.Name} is not in stock at location {location.Name}");
                 }
                 else
                 {
-                    _context.Entry(stock).State = EntityState.Modified;
-                    stock.Quantity -= stockDto.Quantity;
-                    
+                    if (stock.Quantity < stockDto.Quantity) return new OkObjectResult("the stock is not enough");
+                    if (stock.Quantity == stockDto.Quantity)
+                    {
+                        _context.Entry(stock).State = EntityState.Deleted;
+                        stock.Quantity = 0;
 
+
+
+                    }
+                    else
+                    {
+                        _context.Entry(stock).State = EntityState.Modified;
+                        stock.Quantity -= stockDto.Quantity;
+
+
+                    }
                 }
+
+                await _context.SaveChangesAsync();
+
+                return new OkObjectResult(stock);
             }
-
-            await _context.SaveChangesAsync();
-
-            return new OkObjectResult(stock);
-
+            catch (Exception ex)
+            {
+                _logger.LogError(ex, $"{nameof(RemoveStock)} failed. StockDto {stockDto}");
+                return Problem($"{nameof(RemoveStock)} internall error");
+            }
         }
 
 

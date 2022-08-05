@@ -10,5 +10,8 @@ namespace OnlineOrder.Model
         public int LocationId { get; set; }
         public decimal Quantity { get; set; }
 
+        
+
+
     }
 }
